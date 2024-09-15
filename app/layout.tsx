@@ -1,18 +1,6 @@
-import { Inter, JetBrains_Mono } from "next/font/google";
 import React from "react";
-import "./globals.css"
-
-const jetbrain = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-jetbrain",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-inter",
-});
+import "@/styles/globals.css";
+import { inter, pacifico, jetbrain } from "@/lib/fonts";
 
 export const metadata = {
   title: "IntelliQ",
@@ -27,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetbrain.variable} font-sans antialiased`}
+        className={`${inter.variable} ${pacifico.variable} ${jetbrain.variable} font-sans antialiased`}
       >
         {children}
       </body>

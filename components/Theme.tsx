@@ -39,7 +39,7 @@ const Theme = () => {
         </MenubarTrigger>
         <MenubarContent className="bg-light-900 dark:border-dark-400 dark:bg-dark-300 absolute -right-12 mt-3 min-w-[120px] rounded border py-2">
           {themes.map((item) => (
-            // @ts-ignore
+
             <MenubarItem
               key={item.value}
               className="dark:focus:bg-dark-400 flex items-center gap-4 px-2.5 py-2"
