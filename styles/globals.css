@@ -4,8 +4,10 @@
 
 @import url("../styles/styles.css");
 
-body {
-  font-family: "Inter", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @layer utilities {
@@ -117,4 +119,34 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/* Auth */
+.auth-asset {
+  @apply flex h-screen w-1/2 rounded-r-[10%] sticky top-0 content-between justify-start max-lg:hidden;
+}
+
+/* Auth Form */
+.auth-form {
+  @apply flex min-h-screen w-full max-w-[420px] flex-col justify-center gap-5 py-10 md:gap-8;
+}
+
+.form-item {
+  @apply flex flex-col gap-1.5;
+}
+
+.form-label {
+  @apply w-full max-w-[280px] font-medium text-gray-700;
+}
+
+.form-message {
+  @apply text-red-500;
+}
+
+.form-btn {
+  @apply rounded-3xl py-6 bg-rose-600 dark:hover:bg-rose-800 hover:bg-rose-800 text-lg font-semibold font-jetbrain w-full border text-white;
+}
+
+.form-link {
+  @apply cursor-pointer font-medium;
 }

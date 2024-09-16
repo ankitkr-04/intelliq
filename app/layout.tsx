@@ -1,6 +1,7 @@
-import React from "react";
+import { ThemeProvider } from "@/context/ThemeProvider";
+import { inter, jetbrain, pacifico } from "@/lib/fonts";
 import "@/styles/globals.css";
-import { inter, pacifico, jetbrain } from "@/lib/fonts";
+import React from "react";
 
 export const metadata = {
   title: "IntelliQ",
@@ -17,7 +18,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${pacifico.variable} ${jetbrain.variable} font-sans antialiased`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
